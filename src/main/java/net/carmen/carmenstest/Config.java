@@ -1,4 +1,4 @@
-package net.carmen.neoforgetest;
+package net.carmen.carmenstest;
 
 import java.util.List;
 
