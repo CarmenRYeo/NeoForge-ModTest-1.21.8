@@ -3,6 +3,8 @@
   "block.carmens_test.test_block": "Test Block Loc String",
   "item.carmens_test.test_block": "Test Block Loc String",
 
+  "creativetab.carmens_test.test_items": "Test Creative Mode Tab",
+
   "itemGroup.carmens_test": "Example Mod Tab",
   "block.carmens_test.example_block": "Example Block",
   "item.carmens_test.example_item": "Example Item",
