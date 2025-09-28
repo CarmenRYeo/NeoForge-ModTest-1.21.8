@@ -1,6 +1,7 @@
-package net.carmen.carmenstest;
+package net.carmen.carmens_test;
 
-import net.carmen.carmenstest.item.ModItems;
+import net.carmen.carmens_test.block.ModBlocks;
+import net.carmen.carmens_test.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
@@ -20,7 +21,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(CarmensTest.MOD_ID)
 public class CarmensTest {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "carmenstest";
+    public static final String MOD_ID = "carmens_test";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
@@ -37,6 +38,7 @@ public class CarmensTest {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,7 +54,10 @@ public class CarmensTest {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.TESTITEM);
+            event.accept(ModItems.TEST_ITEM);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.TEST_BLOCK);
         }
     }
 

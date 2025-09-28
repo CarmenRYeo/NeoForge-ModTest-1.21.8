@@ -1,0 +1,17 @@
+{
+  "item.carmens_test.test_item": "Test Item Loc String",
+  "block.carmens_test.test_block": "Test Block Loc String",
+  "item.carmens_test.test_block": "Test Block Loc String",
+
+  "itemGroup.carmens_test": "Example Mod Tab",
+  "block.carmens_test.example_block": "Example Block",
+  "item.carmens_test.example_item": "Example Item",
+
+  "carmens_test.configuration.title": "Example Mod Configs",
+  "carmens_test.configuration.section.carmens_test.common.toml": "Example Mod Configs",
+  "carmens_test.configuration.section.carmens_test.common.toml.title": "Example Mod Configs",
+  "carmens_test.configuration.items": "Item List",
+  "carmens_test.configuration.logDirtBlock": "Log Dirt Block",
+  "carmens_test.configuration.magicNumberIntroduction": "Magic Number Text",
+  "carmens_test.configuration.magicNumber": "Magic Number"
+}

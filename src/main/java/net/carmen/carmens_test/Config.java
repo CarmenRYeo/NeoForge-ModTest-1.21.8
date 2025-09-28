@@ -1,4 +1,4 @@
-package net.carmen.carmenstest;
+package net.carmen.carmens_test;
 
 import java.util.List;
 

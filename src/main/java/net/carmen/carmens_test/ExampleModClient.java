@@ -1,4 +1,4 @@
-package net.carmen.carmenstest;
+package net.carmen.carmens_test;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
