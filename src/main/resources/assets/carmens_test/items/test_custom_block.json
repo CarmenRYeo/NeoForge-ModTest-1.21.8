@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "carmens_test:block/test_custom_block"
+  }
+}

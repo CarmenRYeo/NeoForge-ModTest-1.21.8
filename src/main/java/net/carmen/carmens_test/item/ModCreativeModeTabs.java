@@ -21,6 +21,8 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TEST_ITEM);
                         output.accept(ModBlocks.TEST_BLOCK);
+                        output.accept(ModItems.TEST_CUSTOM_ITEM);
+                        output.accept(ModBlocks.TEST_CUSTOM_BLOCK);
                     })
                     .build()
     );

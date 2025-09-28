@@ -1,6 +1,7 @@
 package net.carmen.carmens_test.block;
 
 import net.carmen.carmens_test.CarmensTest;
+import net.carmen.carmens_test.block.custom.TestCustomBlock;
 import net.carmen.carmens_test.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -19,6 +20,7 @@ import java.util.function.Supplier;
 public class ModBlocks {
 
     public static final String ID_TEST_BLOCK = "test_block";
+    public static final String ID_TEST_CUSTOM_BLOCK = "test_custom_block";
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(CarmensTest.MOD_ID);
 
@@ -32,6 +34,16 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock<Block> TEST_CUSTOM_BLOCK = registerBlock(ID_TEST_CUSTOM_BLOCK,
+            () -> new TestCustomBlock(
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse(CarmensTest.MOD_ID + ":" + ID_TEST_CUSTOM_BLOCK)))
+                            .strength(2f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.FROGLIGHT)
+            )
+    );
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
@@ -40,7 +52,7 @@ public class ModBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().setId(
-                ResourceKey.create(Registries.ITEM, ResourceLocation.parse(CarmensTest.MOD_ID + ":" + ID_TEST_BLOCK))
+                ResourceKey.create(Registries.ITEM, ResourceLocation.parse(CarmensTest.MOD_ID + ":" + name))
         )));
     }
 
